@@ -1,0 +1,54 @@
+---
+  0 debug pnpm:scope: 
+    selected: 1
+    workspacePrefix: null
+  1 debug pnpm: 
+    isCaseSensitive: false
+    store: "C:\\Users\\Thk\\.pnpm-store\\2"
+  2 debug pnpm:package-json: 
+    initial: 
+      name: "UrbanDictionary"
+      version: "0.0.1"
+      private: true
+      scripts: 
+        test: "jest"
+        build: "(cd android/ && ./gradlew assembleDebug)"
+        start: "node node_modules/react-native/local-cli/cli.js start"
+        bundle-android: "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/"
+      dependencies: 
+        @babel/runtime: "^7.4.4"
+        react: "16.3.1"
+        react-native: "0.55.4"
+        react-native-gesture-handler: "1.0.16"
+        react-native-material-ui: "^1.30.1"
+        react-native-vector-icons: "^6.4.2"
+        react-navigation: "^3.9.1"
+        react-transform-hmr: "^1.0.4"
+      devDependencies: 
+        @babel/cli: "^7.1.0"
+        @babel/core: "^7.4.3"
+        @babel/plugin-proposal-class-properties: "^7.0.0"
+        @babel/plugin-proposal-object-rest-spread: "^7.0.0"
+        @babel/plugin-transform-async-to-generator: "^7.1.0"
+        @babel/preset-env: "^7.4.3"
+        @babel/preset-flow: "^7.0.0"
+        @babel/preset-react: "^7.0.0"
+        @babel/register: "^7.4.0"
+        babel-core: "^7.0.0-bridge.0"
+        babel-jest: "^23.4.2"
+        babel-loader: "^8.0.2"
+        babel-preset-react-native: "4.0.0"
+        invariant: "^2.2.4"
+        jest: "24.0.0"
+        react-test-renderer: "16.2.0"
+      jest: 
+        preset: "react-native"
+      readme: "# Dico2Cite\r\n\r\nA french version of the famous Urban Dictionnary, build with React Native with love\r\n\r\npré installation :\r\n- npm install react-native-cli -g\r\n- npm install npm@latest -g\r\n- npm install pnpm@latest -g\r\n\r\npré requirement :\r\nhttps://www.mathworks.com/help/supportpkg/android/ug/install-android-sdk-platform-packages-and-sdk-tools.html\r\n\r\nAdd System Variable : \r\nJAVA_HOME=jdk\r\nANDROID_HOME=C:\\Users\\Thk\\AppData\\Local\\Android\\Sdk\r\nGRADLE_HOME=C:Gradle\r\n\r\nEdit System Variable & Users Variable\r\nPATH=%PATH%;%ANDROID_HOME%\\tools;%ANDROID_HOME%\\platform-tools\r\n\r\npré launchement :\r\n- react-native link\r\n- cd android folder and gradle clean\r\n- react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res\r\n- npm start -- --reset-cache\r\n\r\npnpm install\r\n\r\nADB :\r\n- adb devices\r\n- adb kill-server\r\n- adb start-server\r\n\r\nLaunch android application\r\n- react-native run-android\r\n\r\n18/10/2019\r\n- Adding of a debounce on the remote request to limit the number of req to the API, it takes the function and take a debounce time in ms to wait before actually making the request\r\n\r\n11/10/2019\r\n- Let's freaking go man\r\n- Just fixed the lost focus issue, what a struggle man\r\n- Clean my list after search is closed\r\n\r\n02/10/2019\r\n- So lazy but I have to finish this shit\r\n- Everytime I type a char in a toolbar, it calls instantaneously the function despite to let the user type\r\n\r\n19/09/2019\r\n- Replacing a deprecated listview by a flatlist in search.js\r\n\r\n10/09/2019\r\n- Fix header render and generation of list view\r\n\r\n03/09/2019\r\n- get rid of arrow back in word.js\r\n\r\n29/08/2019\r\n- Binding routes to right element on press toolbar\r\n- Binding routes to 3 buttons on search screen\r\n\r\n25/08/2019\r\n- Ajusting the CSS of the search screen\r\n- fitting to the top the toolbar\r\n\r\n19/08/2019\r\n- Ajout d'une toolbar avec recherche\r\n\r\n06/08/2019\r\n- Fixed all routes (WoTD, WoTD2, Random, Search), everything works fine\r\n\r\n05/08/2019\r\n- Fixing the search function\r\n- Passing the parameter to the route and to the API to fetch a word\r\n\r\n04/08/2019\r\n- Fixed that word scren !!! Now it can print on the screen a word card !! So proud !!\r\n\r\n29/07/2019\r\n- Compréhension et utilisation du CreateStackNavigator pour gérer les routes et leurs paramètres\r\n- Passage d'écrans à écrans avec des paramètres, récupérés d'une route précédente ou via le create stack navigator\r\n- Struggle pour rendre l'ecran WordFeed fonctionnel\r\n\r\n25/07/2019\r\n- Transfert des paramètres à la route détails grâce à push() et à react-navigation\r\n\r\n22/07/2019\r\n- I plan to make React Native my bitch 2 weeks post eyes surgery\r\n- Created a screen details and see starting to use this navigator shit, also the push();\r\n\r\n06/05/2019\r\n- Upgrading to react 16.3.0 for Context API\r\n\r\n30/04/2019\r\n- Fixing noInternet.js (imagebackground, netinfo connection change)\r\n- Replacing deprecated navigator in the dependencies by react-navigation, linkind all the packages properly\r\n\r\n17/04/2019\r\n- Upgraded a lot of dependencies to match properly between thoses shits\r\n\r\n12/04/2019\r\n- Adding a lot of libraries, trying to upgrade some dependencies and to make it works.\r\n- Struggling with a lot of bugs betweens thoses dependencies."
+      readmeFilename: "README.md"
+      gitHead: "731572089b1f9e51700c2649b663881f621b42a8"
+      description: "A french version of the famous Urban Dictionnary, build with React Native with love"
+      _id: "UrbanDictionary@0.0.1"
+    prefix: "C:\\Users\\Thk\\Documents\\Git\\Dico2Cite"
+  3 warn pnpm: 
+    message: "Moving @babel/cli that was installed by a different package manager to \"node_modules/.ignored"
+    prefix: "C:\\Users\\Thk\\Documents\\Git\\Dico2Cite"
